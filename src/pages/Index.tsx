@@ -77,71 +77,71 @@ const Index = () => {
   );
 
   const GameModes = () => (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Выберите режим игры</h2>
-        <p className="text-xl text-muted-foreground">Проверьте свои знания в разных форматах</p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-bold mb-6">Выберите режим игры</h2>
+        <p className="text-2xl text-muted-foreground">Проверьте свои знания в разных форматах</p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* 1x1 Mode */}
-        <Card className="game-card cursor-pointer group">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center">
-              <Icon name="Users" className="text-primary" size={32} />
+        <Card className="game-card cursor-pointer group h-96 bg-gradient-to-br from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 border-2 border-primary/20">
+          <CardHeader className="text-center h-full flex flex-col justify-center">
+            <div className="mx-auto mb-8 p-8 bg-primary/20 rounded-full w-32 h-32 flex items-center justify-center">
+              <Icon name="Users" className="text-primary" size={64} />
             </div>
-            <CardTitle className="text-xl">1x1</CardTitle>
-            <p className="text-sm text-muted-foreground">Режим против игрока</p>
+            <CardTitle className="text-4xl mb-4">[ 1x1 ]</CardTitle>
+            <p className="text-xl text-muted-foreground mb-6">режим против игрока</p>
+            <p className="text-lg mb-8">Ваш рейтинг: <span className="font-bold text-primary text-2xl">1500</span></p>
+            <Button size="lg" className="text-xl px-12 py-4 group-hover:bg-primary/90">ИГРАТЬ</Button>
           </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm mb-4">Ваш рейтинг: <span className="font-bold text-primary">1500</span></p>
-            <Button className="w-full group-hover:bg-primary/90">Играть</Button>
-          </CardContent>
         </Card>
 
         {/* Blitz Mode */}
-        <Card className="game-card cursor-pointer group border-orange-200">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 p-4 bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center">
-              <Icon name="Zap" className="text-orange-500" size={32} />
+        <Card className="game-card cursor-pointer group h-96 bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 border-2 border-orange-300">
+          <CardHeader className="text-center h-full flex flex-col justify-center">
+            <div className="mx-auto mb-8 p-8 bg-orange-200 rounded-full w-32 h-32 flex items-center justify-center">
+              <Icon name="Zap" className="text-orange-600" size={64} />
             </div>
-            <CardTitle className="text-xl">🚀 БЛИЦ</CardTitle>
-            <p className="text-sm text-muted-foreground">На время</p>
+            <CardTitle className="text-4xl mb-4">[ 🚀 БЛИЦ ]</CardTitle>
+            <p className="text-xl text-muted-foreground mb-6">НА ВРЕМЯ</p>
+            <p className="text-lg mb-8">Рекорд режима: <span className="font-bold text-orange-600 text-2xl">12.4 сек</span> (UserX)</p>
+            <Button size="lg" variant="outline" className="text-xl px-12 py-4 border-orange-500 text-orange-600 hover:bg-orange-100">ИГРАТЬ</Button>
           </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm mb-4">Рекорд: <span className="font-bold text-orange-500">12.4 сек</span> (UserX)</p>
-            <Button variant="outline" className="w-full border-orange-500 text-orange-500 hover:bg-orange-50">Играть</Button>
-          </CardContent>
         </Card>
 
         {/* Battle Royale Mode */}
-        <Card className="game-card cursor-pointer group border-purple-200">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 p-4 bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center">
-              <Icon name="Crown" className="text-purple-500" size={32} />
+        <Card className="game-card cursor-pointer group h-96 bg-gradient-to-br from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 border-2 border-purple-300">
+          <CardHeader className="text-center h-full flex flex-col justify-center">
+            <div className="mx-auto mb-8 p-8 bg-purple-200 rounded-full w-32 h-32 flex items-center justify-center">
+              <Icon name="Crown" className="text-purple-600" size={64} />
             </div>
-            <CardTitle className="text-xl">👑 КОРОЛЕВСКАЯ БИТВА</CardTitle>
-            <p className="text-sm text-muted-foreground">5 игроков</p>
+            <CardTitle className="text-4xl mb-4">[ 👑 КОРОЛЕВСКАЯ БИТВА ]</CardTitle>
+            <p className="text-xl text-muted-foreground mb-6">5 ИГРОКОВ</p>
+            <p className="text-lg mb-8">Рекорд режима: <span className="font-bold text-purple-600 text-2xl">8 побед</span> (UserY)</p>
+            <Button size="lg" variant="outline" className="text-xl px-12 py-4 border-purple-500 text-purple-600 hover:bg-purple-100">ИГРАТЬ</Button>
           </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm mb-4">Рекорд: <span className="font-bold text-purple-500">8 побед</span> (UserY)</p>
-            <Button variant="outline" className="w-full border-purple-500 text-purple-500 hover:bg-purple-50">Играть</Button>
-          </CardContent>
         </Card>
+      </div>
 
-        {/* Marathon Mode */}
-        <Card className="game-card cursor-pointer group border-green-200">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 p-4 bg-green-100 rounded-full w-16 h-16 flex items-center justify-center">
-              <Icon name="Target" className="text-green-500" size={32} />
+      {/* Marathon Mode - отдельная большая карточка */}
+      <div className="mt-8">
+        <Card className="game-card cursor-pointer group h-64 bg-gradient-to-r from-green-50 to-emerald-100 hover:from-green-100 hover:to-emerald-200 border-2 border-green-300">
+          <CardHeader className="text-center h-full flex flex-row items-center justify-between px-16">
+            <div className="flex items-center space-x-8">
+              <div className="p-6 bg-green-200 rounded-full w-24 h-24 flex items-center justify-center">
+                <Icon name="Target" className="text-green-600" size={48} />
+              </div>
+              <div className="text-left">
+                <CardTitle className="text-4xl mb-2">[ 🏁 МАРАФОН ]</CardTitle>
+                <p className="text-xl text-muted-foreground">До первой ошибки</p>
+              </div>
             </div>
-            <CardTitle className="text-xl">🏁 МАРАФОН</CardTitle>
-            <p className="text-sm text-muted-foreground">До первой ошибки</p>
+            <div className="text-right">
+              <p className="text-lg mb-4">Рекорд режима: <span className="font-bold text-green-600 text-2xl">57 вопросов</span> (UserZ)</p>
+              <Button size="lg" variant="outline" className="text-xl px-12 py-4 border-green-500 text-green-600 hover:bg-green-100">ИГРАТЬ</Button>
+            </div>
           </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm mb-4">Рекорд: <span className="font-bold text-green-500">57 вопросов</span> (UserZ)</p>
-            <Button variant="outline" className="w-full border-green-500 text-green-500 hover:bg-green-50">Играть</Button>
-          </CardContent>
         </Card>
       </div>
     </div>
